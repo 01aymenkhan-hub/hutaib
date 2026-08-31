@@ -1,0 +1,63 @@
+.quoteformsec{
+    width: 100%;
+    height: 700px;
+    background: var(--color-blue);
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    color: white;
+    border-radius: var(--border-radius);
+    border: 2px solid black;
+    .quoteform{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+    }
+    h1{
+        grid-column: span 2;
+        text-align: center  ;
+        font-weight: 400;
+        font-size: 50px;
+    }
+    p{
+        font-size: 20px;
+    }
+    input{
+    border-radius: var(--border-radius);
+    font-size: 20px;
+    padding: 5px;
+    }
+    .quote_btn{
+        display: grid;
+        margin: 0 auto;
+        width: 40%;
+        font-size: 20px;
+        // color: white;
+        background: var(--color-orange);
+        border-radius: var(--border-radius);
+        grid-column: span 2;
+        color: white;
+        font-weight: 600;
+        padding: 5px;
+
+
+    }
+
+}
+.fields{
+    display: grid;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+@media screen and (min-width: 375px) {
+    .quoteform{
+        display: flex;
+        justify-content: center;
+     
+    }
+    
+}

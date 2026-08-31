@@ -1,0 +1,69 @@
+.videoBannerWrapper {
+    width: 100%;
+    height: calc(100vh - 150px);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 60px;
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .videoContentWrapper {
+        width: 100%;
+        height: 100%;
+        background: #00000052;
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .videoContentContainer {
+            width: 800px;
+            height: auto;
+            border-bottom: 2px solid var(--color-orange);
+
+            .content {
+                text-align: center;
+                color: white;
+                font-size: 2.5rem;
+
+                span {
+                    display: grid;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .videoBannerWrapper {
+        width: 100%;
+        height: calc(100vh - 150px);
+        top: 105px;
+
+        .videoContentWrapper {
+            .videoContentContainer {
+                width: 90%;
+                border-bottom: 2px solid var(--color-orange);
+
+                .content {
+                    font-size: 2rem;
+
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .videoBannerWrapper {
+        height: calc(100vh - 105px);
+    }
+}

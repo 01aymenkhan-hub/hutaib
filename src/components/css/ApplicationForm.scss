@@ -1,0 +1,139 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.form_container {
+  width: 100%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  padding: 40px 80px;
+  align-items: center;
+}
+.image_sec1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/applicationform.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius);
+}
+.form_sec {
+  width: 100%;
+  height: 100%;
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  background: var(--color-blue);
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.innerform {
+  // ------------
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  padding: 30px;
+  color: white;
+  grid-gap: 1rem;
+  span {
+    .marg {
+      margin-bottom: 5px;
+    }
+  }
+  .hrl {
+    display: grid;
+    text-align: center;
+    grid-column: span 2;
+    justify-content: center;
+    span {
+      border-bottom: 4px solid white;
+      width: 100%;
+    }
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+  input {
+    width: 100%;
+    border-radius: var(--border-radius);
+    height: 30px;
+    padding-left: 15px;
+    outline: none;
+    border: none;
+    height: 35px;
+  }
+  p {
+    font-size: 20px;
+  }
+
+  .a_lign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  button {
+    width: 70%;
+    margin-left: 15%;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    height: 40px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    background: var(--color-orange);
+    color: white;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .form_container {
+    grid-template-columns: 30% 70%;
+  }
+  .form_sec {
+    padding: 30px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .form_container {
+    grid-template-columns: 30% 70%;
+  }
+  .innerform {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 1010px) {
+  .innerform h1 {
+    font-size: 35px;
+  }
+  .form_sec {
+    padding: 0px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .form_container {
+    border-bottom: 50px solid white;
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+  .form_sec {
+    border-radius: 0px;
+    .innerform {
+      .hrl {
+        margin-bottom: 30px;
+      }
+      button {
+        margin-top: 30px;
+      }
+    }
+  }
+  .image_sec1 {
+    display: none;
+  }
+}

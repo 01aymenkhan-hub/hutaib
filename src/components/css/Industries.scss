@@ -1,0 +1,56 @@
+.mapItemContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 50px;
+
+    .item {
+        text-align: center;
+        padding: 15px 0;
+        border: 1px solid #233974;
+        border-radius: var(--border-radius);
+        margin-bottom: 6px;
+        transition: all .5 ease;
+        color: #233974;
+        font-weight: 500;
+        font-size: 18px;
+        transition: all .5s ease;
+        position: relative;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 0%;
+            height: 3px;
+            background: var(--color-orange);
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            transition: all .5s ease;
+        }
+
+        &:hover {
+            background: #233974;
+            color: white;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mapItemContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .mapItemContainer {
+        grid-template-columns: 1fr;
+    }
+
+}

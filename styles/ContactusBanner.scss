@@ -1,0 +1,24 @@
+.ContactusBanner{
+    width:100%;
+    min-height: 20px;
+    // background-image: url('../../assets/aboutus_banner.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 450px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+@media screen and (min-width:240px) and (max-width:768px)  {
+
+    .ContactusBanner{
+        min-height: 20px;
+        // background-image: url('../../assets/aboutus_banner.jpg');
+        background-position: center center;
+        background-size: cover;
+    
+    }
+
+}

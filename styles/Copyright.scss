@@ -1,0 +1,19 @@
+.Copyright{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: var(--color-blue);
+    margin: 0px;
+    padding: 0px;
+    p, a{
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        margin: 0px;
+        text-decoration: none;
+    }
+   
+}

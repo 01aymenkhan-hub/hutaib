@@ -1,0 +1,180 @@
+.MultiColSectionContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 100px 0px;
+
+    .imageContainer {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .contentContainer {
+        background: black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+
+        .title {
+            color: var(--color-orange);
+            font-size: 24px;
+            font-weight: 500;
+        }
+
+        .description {
+            color: white;
+        }
+    }
+
+    .twoColSection {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+
+
+
+        .col {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            padding: 0;
+
+            .image {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    position: absolute;
+                }
+
+                .contentWrapper {
+                    background: var(--color-blue);
+                    height: 100%;
+                    min-height: 300px;
+                    background: var(--color-orange);
+                    z-index: 255;
+                    position: relative;
+                    color: white;
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    transition: all .5s ease;
+                    cursor: pointer;
+
+                    .title {
+                        font-weight: 600;
+                        font-size: 26px;
+                        line-height: 1.3em;
+                        margin: 0px;
+                    }
+
+                    .icon {
+                        margin: 5px 0px;
+                        font-size: 37px;
+                    }
+
+                    .description {
+                        display: none;
+                        margin-top: 20px;
+                    }
+
+                    &:hover {
+                        background: #f28204ab;
+
+                        .icon {
+                            display: none;
+                        }
+
+                        .description {
+                            display: block;
+                        }
+                    }
+                }
+
+                .sndColor {
+                    background: var(--color-blue);
+
+                    &:hover {
+                        background: #052f51cc
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1060px) {
+    .MultiColSectionContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .MultiColSectionContainer .twoColSection {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .MultiColSectionContainer .contentContainer {
+        padding: 60px 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .MultiColSectionContainer .imageContainer img {
+        height: 500px;
+    }
+
+    .MultiColSectionContainer .contentContainer {
+        padding: 60px 20px;
+    }
+
+    .MultiColSectionContainer .twoColSection {
+        grid-template-columns: 1fr;
+    }
+
+    .twoColSection.rev {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .MultiColSectionContainer .twoColSection .col .image .sndColor {
+        background: #052f51cc;
+    }
+
+    .MultiColSectionContainer .twoColSection .col .image .firstColor {
+        background: #f28204ab;
+    }
+
+    .MultiColSectionContainer .twoColSection .col .image .contentWrapper .icon {
+        display: none;
+    }
+
+    .MultiColSectionContainer .twoColSection .col .image .contentWrapper .description {
+        display: block;
+    }
+
+    .MultiColSectionContainer .imageContainer img {
+        object-position: top;
+    }
+
+    // .MultiColSectionContainer .twoColSection .col .image .sndColor {
+    //     background: #052f51cc;
+    // }
+
+    // .MultiColSectionContainer .twoColSection .col .image .contentWrapper {
+    //     background: #f28204ab;
+    // }
+}

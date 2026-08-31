@@ -1,0 +1,158 @@
+.ProductRow {
+  min-height: 300px;
+  background-position: center left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  align-content: center;
+
+  .inner {
+    padding: 0 5%;
+
+    .title {
+      a {
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: var(--color-white);
+        font-size: 2.6em;
+        transition: all 0.6s ease;
+
+        &:hover {
+          color: var(--color-orange);
+        }
+      }
+    }
+
+    .desc {
+
+      width: 35%;
+
+      .descwrap {
+        display: inline;
+
+        .desc_text {
+          display: inherit;
+
+          p {
+            display: inherit;
+          }
+        }
+
+        >span {
+          font-weight: 900;
+          cursor: pointer;
+          margin: 0 8px;
+          position: relative;
+          color: white;
+
+          &:not(.read_less):after {
+            content: " ...";
+            position: absolute;
+            margin-left: 2px;
+          }
+        }
+      }
+
+
+      p {
+        color: var(--color-white);
+        font-size: var(--text-font-size);
+        line-height: var(--text-line-height);
+        padding-bottom: 10px;
+      }
+    }
+
+    .buttons_cont {
+      margin-top: 20px;
+
+      .quote-btn {
+        cursor: pointer;
+        background: var(--color-orange);
+        color: var(--color-blue);
+        width: auto;
+
+        &:hover {
+          // color:orange;
+          background: white
+        }
+      }
+
+      a {
+        padding: 11px 10px;
+        text-decoration: none;
+      }
+
+      button {
+        padding: 8px 10px;
+      }
+
+      button,
+      a {
+        border-radius: var(--border-radius);
+        border: none;
+        outline: none;
+        margin: 0 5px;
+        font-weight: 600;
+
+        &:nth-child(1) {
+          background: white;
+          color: var(--color-blue);
+        }
+
+        &:nth-child(2) {
+          background: var(--color-orange);
+          color: var(--color-blue);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 240px) and (max-width: 768px) {
+  .ProductRow {
+    .inner {
+      padding: 0 5px;
+
+      .title {
+        text-align: center;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-size: 2em;
+        }
+      }
+
+      .desc {
+        text-align: center;
+        width: 100%;
+
+        p {
+          color: var(--color-white);
+          font-size: var(--text-font-size);
+          line-height: var(--text-line-height);
+          text-align: justify;
+          padding: 0px 10px;
+        }
+      }
+
+      .buttons_cont {
+        button {
+          margin-top: 8px;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.main_area_container{
+    width: 100vw;
+    height: 250px;
+    background: var(--color-blue);
+    // background: linear-gradient(90deg, rgba(42,107,159,1) 16%, rgba(14,56,89,1) 52%);
+    // background: #052f51;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 40px 0;
+    
+
+}
+.aboutus_heading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: red;
+
+}
+
+.aboutus_heading{
+    text-transform: capitalize;
+}
+.aboutus_heading h1{
+    margin: 0px;
+    padding: 0px;
+}
+.line{
+    width: 150px;
+    height: 5px;
+    border-radius: 5px;
+    background: white;
+    margin: 10px;
+}
+
+.aboutus_info{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    // background: rebeccapurple;
+    display: grid;
+    grid-template-columns: repeat(3,250px);
+    justify-content:space-around;
+    align-items: center;
+    grid-gap: 1rem;
+}
+
+.social{
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+}
+.social h3{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.social p{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+
+}
+.icons{
+    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1050px) {
+
+
+
+    .main_area_container{
+        width: 100vw;
+        height: 500px;
+        display: grid;
+        grid-template-rows: 30% 70%;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0;
+        
+    }
+
+    .aboutus_info{
+        display: grid;
+        grid-template-columns: repeat(2,250px);
+        justify-content:space-around;
+        align-items: center;
+        grid-gap: 1rem;
+    }
+    .icons{
+        margin-bottom: 10px;
+    }
+    
+    
+  }
+
+  
+@media only screen and (max-width: 520px) {
+
+
+
+    .main_area_container{
+        width: 100vw;
+        height: 1000px;
+        display: grid;
+        grid-template-rows: 20% 80%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        
+    }
+
+    .aboutus_info{
+        display: grid;
+        grid-template-columns:250px;
+        justify-content:space-around;
+        align-items: center;
+        grid-gap: 1rem;
+    }
+    .social p{
+        font-size: 18px;
+    }
+    .icons{
+        margin-bottom: 10px;
+    }
+  }

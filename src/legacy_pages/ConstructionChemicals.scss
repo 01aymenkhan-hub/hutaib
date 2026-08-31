@@ -1,0 +1,40 @@
+@media only screen and (max-width: 600px) {
+    .Wrapme {
+        padding: 110px 0px 30px 0px;
+    }
+}
+
+
+.seocontent {
+
+    padding: 20px 20px 10px 20px;
+    height: 100%;
+    width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    text-align: justify;
+    box-shadow: 0px 0px 10px #0000002e;
+    border-radius: var(--border-radius);
+    margin-bottom: 3px;
+    background-color: white;
+    margin-top: 0.7em;
+    height: 350px;
+    overflow-y: scroll;
+    margin-bottom: 80px;
+
+    h1 {
+        color: var(--color-blue);
+    }
+
+    p {
+        color: var(--color-blue);
+        font-size: var(--text-font-size);
+    }
+}
+
+@media only screen and (max-width: 1268px) {
+
+    .seocontent {
+        width: 90%;
+    }
+}

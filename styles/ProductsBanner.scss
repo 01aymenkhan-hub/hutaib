@@ -1,0 +1,36 @@
+.ProductsBanner {
+    width: 100%;
+    min-height: 400px;
+    // background-image: url('/assets/images/product.png');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 450px;
+
+    position: relative;
+
+    .dynamicbanner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .banner_inner {
+        padding-top: 80px;
+    }
+}
+
+@media screen and (min-width:240px) and (max-width:768px) {
+
+    .ProductsBanner {
+        min-height: 400px;
+        // background-image: url('/assets/images/Producttab.png');
+        background-position: center center;
+        background-size: cover;
+
+        .banner_inner {
+            padding-top: 150px;
+        }
+    }
+
+}

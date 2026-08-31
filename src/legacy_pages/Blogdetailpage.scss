@@ -1,0 +1,119 @@
+.blogdetailpage {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+
+
+    .blogdetailbanner {
+        width: 100%;
+        height: 400px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .blogdetailwrapper {
+        width: 60%;
+        margin: 0 auto;
+
+        h1 {
+            // text-align: center;
+            color: var(--color-blue);
+            font-weight: 600;
+            font-size: 38px;
+            margin: 50px 0px 10px 0px;
+        }
+
+        .inner {
+            p {
+                span {
+                    text-align: justify;
+                    font-size: 17px !important;
+                    color: var(--color-blue);
+                }
+            }
+
+            ul {
+                padding: 0px;
+                padding-left: 15px;
+                color: var(--color-blue);
+            }
+
+            h2 {
+                span {
+                    font-size: 30px !important;
+                    font-weight: 600 !important;
+                    margin: 10px 0px 10px 0px !important;
+                    color: var(--color-blue) !important;
+                }
+            }
+
+            img {
+                width: 100%;
+                // margin-bottom: 30px;
+            }
+        }
+
+    }
+}
+
+.loader {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+@media only screen and (max-width: 1268px) {
+    .blogdetailpage .blogdetailwrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .blogdetailpage {
+        margin-top: 105px;
+    }
+
+    .blogdetailpage .blogdetailbanner {
+        height: 250px;
+    }
+}
+
+
+@media only screen and (max-width: 548px) {
+    .blogdetailpage .blogdetailwrapper h1 {
+        font-weight: 600;
+        font-size: 26px;
+    }
+
+    .blogdetailpage .blogdetailwrapper .inner h2 span {
+        font-size: 24px !important;
+    }
+
+    .blogdetailpage .blogdetailbanner {
+        height: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    .blogdetailpage .blogdetailwrapper h1 {
+        font-size: 24px;
+    }
+
+    .blogdetailpage .blogdetailwrapper {
+        width: 90%;
+    }
+
+    .blogdetailpage .blogdetailwrapper .inner ul {
+        padding-left: 0px;
+    }
+}
